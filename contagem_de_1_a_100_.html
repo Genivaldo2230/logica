@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function exibirLinha() {
+
+        document.write("<hr>");
+    }
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    contador = 0;
+
+    while(contador <= 100) {
+
+        mostra(contador);
+        contador = contador + 2;
+    }
+
+    mostra("Contabem nos números pares de 0 até 100 ");
+    mostra("Fim!...");
+
+</script>

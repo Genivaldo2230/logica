@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<h1>*** Jogo adivinhar número ***</h1>
+
+<script>
+	
+    var numeroPensado = Math.round(Math.random() * 100);
+
+    var numeroDaTentativa = 1;
+    while(numeroDaTentativa <= 3) {
+
+        var chute = parseInt(prompt("Qual você acha que é?"));
+        if (chute == numeroPensado) {
+
+            alert("Parabéns, você acertou!");
+            //sai do loop
+            break;
+            /*poderia também acrescentar o valor a variável "numeroDaTentativa = 4" 
+            fazendo-se while realizar a comparação do valor e assim saindo */ 
+            
+        } else {
+
+            alert("Você errou. Será que ainda  tem mais tentativas?");
+        }
+        numeroDaTentativa++;
+    }
+
+</script>

@@ -1,0 +1,48 @@
+  <meta charset="UTF-8">
+
+  <script>
+  		function exibeTitulo (titulo) {
+
+  			document.write("<h1>" + "*** " + titulo + " ***" + "</h1>");
+  			exibeLinha();
+  			pulaLinha();
+  		}
+
+  		function exibeSubTitulo(subTitulo) {
+
+  			document.write("<h6>" + "✪✪✪ " + subTitulo + " ✪✪✪" + "</h6>");
+  		}
+
+  		function pulaLinha() {
+
+  			document.write("<br>");
+  		}
+
+  		function exibeLinha() {
+
+  			document.write("<hr>");
+  		}
+
+
+  		function pulaLinha() {
+
+        document.write("<br>");
+    	}
+
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+	 exibeTitulo("Casa do Código Futebol Clube");
+	 exibeSubTitulo("Sistema de contagem dos pontos!");
+
+	 var vitorias = parseInt(prompt("Quantos jogos o CDC Futebol Clube venceu?"));
+	 var empates = parseInt(prompt("Quantos jogos o CDC Futebol Clube empatou?"));
+	 var pontos = (vitorias * 3) + empates;    
+
+	 mostra("Nosso time tem " + pontos + " pontos!");
+
+</script>

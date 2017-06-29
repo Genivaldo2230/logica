@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<h1>*** Asteriscos ***</h1>
+
+<script>
+	
+	function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    //Executar o "For" três vezes
+    for(var linha = 0; linha < 3; linha = linha + 1) {
+
+        /*
+        Executa 10 vezes e acada execuçõa coloca-se um asteriscos
+        um ao lado do outro
+        */
+        for(var coluna = 0; coluna < 10; coluna = coluna + 1) {
+
+            document.write("*");
+        }
+
+        /*
+         Realiza-se a quebra de linha, fazendo-se que com que caso o "For" seja realizado novamente,
+        será exibida uma nova linha de asteriscos conforme o "For" anteior.
+         */
+        //document.write("</br>");
+        pulaLinha();
+    }
+
+</script>

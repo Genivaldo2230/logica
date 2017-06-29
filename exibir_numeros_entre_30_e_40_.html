@@ -1,0 +1,59 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numero = 30;
+    var exibirNumero = "Sim";
+
+
+    while(numero <= 40) {
+
+        if (numero == 33) {
+
+            exibirNumero = "Não";
+        }
+
+        if (numero == 37) {
+
+            exibirNumero = "Não";
+        }
+
+        if (exibirNumero == "Sim") {
+
+            mostra("O número é " + numero);
+        }
+
+        /*
+        Outra forma de verificação
+        while(numero <= 40) {
+            if (numero != 33 && numero != 37) {
+                mostra(contador);
+
+            }
+    
+        }
+            numero = numero + 1;
+
+        */
+
+        exibirNumero = "Sim";
+
+        numero = numero + 1;
+           
+    }
+
+    mostra("Fim!...");
+
+</script>

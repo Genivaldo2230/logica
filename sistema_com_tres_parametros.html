@@ -1,0 +1,69 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function inserirLinha() {
+
+		document.write("<hr>");
+
+	}
+
+	function exibeTitulo(titulo) {
+
+		document.write("<h1>" + " *** " + titulo + " *** " + "</h1>");
+		inserirLinha();
+		pulaLinha();
+		pulaLinha();
+
+	}
+
+	function exibeSubTitulo(subTitulo) {
+
+		document.write("<h5>" + " ►►► " + subTitulo + " ◄◄◄  " + "</h5>");
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function calculaImc(altura, peso) {
+
+		var imc = peso / (altura * altura);
+		return imc;
+		/*se a variável imc estiver com um valor, idenpendente do resultado
+		será exibido o valor atribuido ao imc 
+		ex.: return "outro valor";
+		*/
+	}
+
+	function fecharSistema() {
+
+		pulaLinha();
+		document.write("=====>  Cálculo finalizado!...");
+	}
+
+	function geraCodigo(string, numero1, numero2 ) {
+
+		return "GH1022";
+
+	}
+
+	exibeTitulo("Sistema gerador de código ");
+	//exibeSubTitulo("Indice de Maça Corporal");
+
+	//var imcFlavio = pesoFlavio / (alturaFlavio * alturaFlavio);
+
+	mostra("O código é " + geraCodigo()) ;
+
+	fecharSistema();
+	
+</script>

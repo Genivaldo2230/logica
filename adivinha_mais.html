@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<input/> - Caixa de entrada
+
+<button>Compara com o meu segredo</button>
+
+<script>
+    var segredo = 5;
+    //Recebe o valor da tab input
+    var input = document.querySelector("input");
+    
+    function verifica() {
+
+        alert(input.value);
+        if (input.value == segredo) {
+            alert("Você ACERTOU");
+        }else{
+            alert("Você ERROU");
+        }
+    }
+
+
+    var button = document.querySelector("button");
+    /* 
+    Executa a função automaticamente
+    button.onclick = verifica();
+    */
+
+    /*
+    Todo o código da função verifica para para onClick, sendo assim a função sendo executada somente
+    quando der um click no botão no evento onclick
+    */
+    button.onclick = verifica;
+
+  
+
+</script>

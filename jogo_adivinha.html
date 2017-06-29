@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+
+<script>
+	/*
+	O mic calculado em entrada de dados externos via popup,
+	atraves do comando prompt
+	*/
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    //Obtendo um número inteiro e aleatório entre 0 e 100....
+    //Para obter um número entre 0 e 100
+    var numeroPensadoComCasasDecimais = Math.random() * 100;
+
+    //Para obter um número entre 0 e 10
+    var numeroPensadoComCasasDecimais = Math.random() * 10;
+
+    //Com o comando console.log, será exibido no chrome qual foi o número garado pelo sistema
+    //facilitando o teste em sua execução.
+    console.log(numeroPensado);
+
+    var numeroPensado = Math.random(numeroPensadoComCasasDecimais);
+    /*
+    Outra forma de se fazer...
+    var numeroPensado = Math.round(Math.random() * 100);
+    */
+
+    var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+
+    if(chute == numeroPensado) {
+
+        mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado );
+
+    }else{
+
+        mostra("Você errou, o número pensado foi " + numeroPensado );
+
+    }
+
+</script>

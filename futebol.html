@@ -1,0 +1,98 @@
+ <meta charset="UTF-8">
+
+ <script>
+
+    function exibeTitulo (titulo) {
+
+        document.write("<h1>" + "*** " + titulo + " ***" + "</h1>");
+        exibeLinha();
+        pulaLinha();
+    }
+
+    function exibeSubTitulo(subTilulo) {
+
+        document.write("<h6>" + "► ► ► " + subTilulo + "◄◄◄" + "</h6>");
+    }
+
+    function fecharSistema() {
+
+        document.write("Verificação encerrada...");
+    }
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function exibeLinha() {
+
+        document.write("<hr>");
+    }
+
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var vitorias = parseInt(prompt("Entre com o número de vitórias.") );
+    var empates = parseInt(prompt("Entre com o número de empates") );
+    var pontos = (vitorias * 3) + empates;
+
+    exibeTitulo("Sistema Futebol");
+    
+    exibeSubTitulo("Livros Velhos Futebol Clube");
+    mostra("Livros Velhos Futebol Clube");
+    mostra("Os pontos do seu time é " + pontos + ".");
+
+    if(pontos > 28) {
+
+        mostra("Seu time está melhor do que o ano passado.");
+    }
+
+    if(pontos < 28) {
+
+        mostra("Seu time e stá pior do que o ano passado.");
+    }
+
+    if(pontos == 28) {
+
+        mostra("Seu time está igual ao ano passado.");    
+    }
+
+    pulaLinha();
+
+
+    exibeSubTitulo("Livros Velhos Futebol Clube");
+    var pontosTimeLivrosVelhos = 28;
+    mostra("Sua pontuação é " + pontosTimeLivrosVelhos + ".");
+    pulaLinha();
+
+   if(pontos > pontosTimeLivrosVelhos) {
+
+        mostra("Nosso time está indo MELHOR que o Livros Velhos!");
+    }
+
+
+    if(pontos < pontosTimeLivrosVelhos) {
+
+        mostra("Nosso time está indo PIOR que o Livros Velhos!");
+    }
+
+
+    if(pontos == pontosTimeLivrosVelhos) {
+
+        mostra("Nosso time está EMPATADO com o Livros Velhos!");
+    }
+
+
+    fecharSistema();
+
+</script>

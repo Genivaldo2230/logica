@@ -1,0 +1,43 @@
+<meta charsert="UTF-8">
+
+<script>
+
+	function exibeTitulo(titulo) {
+
+		document.write("<h1>" + " *** " + titulo + " *** " + "</h1>"); 
+		document.write("<hr>");
+		pulaLinha();
+		pulaLinha();
+	}
+
+	function pulaLinha() {
+
+		document.write("<br>");
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function finalizarSistema() {
+
+		pulaLinha();
+		mostra("Fim da verificação!...");
+		pulaLinha();
+		mostra("Sistema encerrado!");
+	}
+
+	var minhaIdade = 45;
+	var idadeMeuIrmao = 25;
+
+	exibeTitulo("Sistema de verficação de diferença entre idades");
+	mostra("Minha idade é de " + minhaIdade + " anos.");
+	mostra("A idade do meu irmão é de " + idadeMeuIrmao + " anos.");
+	mostra("A diferença entre as nossas idade é de " + (minhaIdade - idadeMeuIrmao) + " anos.");
+	document.write("<big>Versão 1.0"+"</big>");
+
+	finalizarSistema();
+
+</script>

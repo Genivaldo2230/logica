@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+
+<script>
+
+    /*
+        A função b esta recebendo a concatenação do nome com o sobrenome, mas veja que o sobrenome é o retorno da função a. A função a devolverá o sobrenome entre parênteses, daí, esse valor será concatenado com o nome e o resultado finalmente será passado para a função B.
+    */
+
+    //Quegra de linha...
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    //Realiza a quebra de linha e exibe o texto digitado
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+
+    //Pega o valor da variável texto e coloca entre parenteses
+    function a(texto) {
+
+        return "(" + texto + ")";
+    }
+
+
+    //Pega o valor da variável texto e coloca entre '@'
+    function b(texto) {
+
+        return "@" + texto + "@";
+    }
+
+    /*
+        Pega o valor da varável nome e sobrenome das a e b e contatena
+        e ao mesmo tempo realizando a formatação ultilizando as funções "a" e "b".
+    */    
+    function c(nome, sobrenome) {
+
+        return b(nome + " " + a(sobrenome));
+    }
+
+    //A variável resultado recebe a concatenação referente a função c sobre os dados inseridos
+    var resultado = c("Max", "José");
+
+    //Exibe o resultado
+    mostra(resultado);
+
+</script>

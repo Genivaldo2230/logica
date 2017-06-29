@@ -1,0 +1,54 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function verificacaoDeAcesso() {
+        if (abrindoOSistema == "Sim") {
+
+            mostra("Carregando espere!...");
+        }else {
+
+            mostra("Acesso não mais permitido!");
+            mostra("Peço que entre em contato com o administrador do sistema!");
+
+        }
+    }
+
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+    var loginInformado;
+    var senhaInformada;
+    var tentativasDeAcesso = 0;
+    var abrindoOSistema = "Não";
+
+    while( ( tentativasDeAcesso <= 3 ) && (abrindoOSistema != "Sim") ) {
+
+        loginInformado = prompt("Informe seu login");
+        senhaInformada = prompt("Informe sua senha");
+
+        if( ( loginCadastrado == loginInformado) && (senhaCadastrada == senhaInformada ) ) {
+
+            abrindoOSistema = "Sim";
+            alert("Bem-vindo ao sistema " + loginInformado);
+        } else {
+
+            alert("Login inválido. Tente novamente");
+        }
+
+        tentativasDeAcesso = tentativasDeAcesso + 1;
+    }
+
+    verificacaoDeAcesso();
+
+    
+</script>

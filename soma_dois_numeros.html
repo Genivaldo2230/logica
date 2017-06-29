@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+
+<script>
+	function pulaLinha() {
+
+		document.write("<br>");
+	}
+
+	function exbiteTitulo(titulo) {
+
+		document.write("<h1>" + " *** "+ titulo + " *** " + "</h1>");
+		exibeLinha();
+		pulaLinha();
+	}
+
+		
+	function exibeLinha() {
+
+		document.write("<hr>");
+	}
+
+	function mostrar(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function somaDoisNumeros(numero1 , numero2) {
+
+		var resultado = (numero1 + numero2);
+		mostrar("A soma entre o número " +  numero1 + " é o número " + numero2  + " é " + " ====> " + resultado + ".");
+		//mostrar("A soma entre o dois número " +  (numero1 + numero2) );
+	}
+
+	function darEspaco() {
+
+		document.wite("&nbsp;");
+	}
+
+
+	exbiteTitulo("Sistema de soma entre dois números");
+	
+	somaDoisNumeros(20, 80);
+
+</script>

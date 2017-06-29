@@ -1,0 +1,80 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	function exibeTitulo(titulo) {
+
+	 	document.write("<h1>" + " *** " + titulo + " *** " + "</h1>");
+	 	inserirLinha();
+		pularLinha();
+		pularLinha();
+
+    }
+
+    function exibeSubTitulo(subTitulo) {
+
+    	document.write("<h5>" + " ᐅᐅᐅ " + subTitulo + " ᐊᐊᐊ " + "</h5>");
+
+    }
+
+    function inserirLinha( ) {
+
+    	document.write("<hr>");
+
+    }
+
+
+	function pularLinha() {
+
+		document.write("<br>");
+
+	}
+
+	function mostrar(frase) {
+
+		document.write(frase);
+		pularLinha();
+
+
+	}
+
+	function fecharSistema() {
+
+		document.write("Sistema Finalizado!");
+		pularLinha();
+		document.write("Versão 1.0");
+
+	}
+
+	exibeTitulo("Sistema de verificação de gerações de brasileiros");
+
+	var mediaIdadeCasalComFilhos = 28;
+	var chegadaPortuguesesAoBrasil = 1500;
+	var primeiraGeracaoDeBrasileiros = 1528;
+	var segundaGeracaoDeBrasileiros = 1556;
+	
+	var anoAtual;
+
+	mostrar("Ano atual é " + (anoAtual = 2017) );
+	mostrar("Os portugueses chegaram ao Brasil no ano de: " + chegadaPortuguesesAoBrasil);
+	mostrar("Primeira geração de brasileiros foi no ano de " + primeiraGeracaoDeBrasileiros);
+	mostrar("A média de idade de casais com filhos é de: " + mediaIdadeCasalComFilhos);
+	mostrar("A segunda geração de brasileiros foi no ano de " + segundaGeracaoDeBrasileiros);
+
+	inserirLinha();
+	pularLinha();
+
+	exibeSubTitulo("Com essas informações podemos concluir que!");
+
+	var totalDeAnosPassados;
+	mostrar("Desde " + chegadaPortuguesesAoBrasil + " até " + anoAtual + " passaram-se " + (totalDeAnosPassados = (anoAtual - chegadaPortuguesesAoBrasil) ) + " anos.");
+	
+	var totalDeGeracoes;
+	mostrar("E o total de gerações até o ano de " + anoAtual + " foi de " + Math.round(totalDeGeracoes = (totalDeAnosPassados / mediaIdadeCasalComFilhos) ) + " gerações.");
+
+	inserirLinha();
+
+	fecharSistema();
+
+	
+</script>

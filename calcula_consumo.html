@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<h1>Álcool ou Gasolina?</h1>
+
+<!--
+Carro com tanque de 40 litros.
+-> fez um caminho com alcool de 300 km
+var caminhoComAlcool.
+Qual é o consumoDeAlcool?
+
+
+-->
+
+<script>
+
+	function pulaLinha() {
+
+		document.write("<br>");
+	}
+	
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+	var tanque = 40;
+	var caminhoComGasolina = 480;
+	var consumoDeGasolina = caminhoComGasolina / tanque;
+
+	mostra("O consumo em gasolina foi de " + consumoDeGasolina + " km/L.");
+	
+	var caminhoComAlcool = 300;
+	var consumoComAlcool = caminhoComAlcool / tanque;
+
+	pulaLinha();
+
+	mostra("O consumo em alcool foi de " + consumoComAlcool + "km/L.");
+
+</script>

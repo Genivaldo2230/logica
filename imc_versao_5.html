@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+
+<script>
+	/*
+	O mic calculado em entrada de dados externos via popup,
+	atraves do comando prompt
+	*/
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function calculaImc(altura, peso) {
+
+        return peso/ (altura * altura);
+    }
+
+    var alturaInformada = prompt("Informe sua altura");
+    var pesoInformado = prompt("informe seu peso");
+
+    var imc = calculaImc(alturaInformada, pesoInformado);
+
+    document.write("O IMC calculado é " + Math.round(imc) );
+
+    pulaLinha();
+
+    if(imc < 18.5) {
+
+        mostra("Seu IMC indica que você está ABAIXO do peso.");
+    }
+
+
+    if(imc > 35) {
+
+        mostra("Você está acima do recomendado.");
+    }
+
+
+    if(imc >= 18.5 && imc <= 35) {
+        
+        mostra("Seu imc está excelente.");
+    }
+
+</script>

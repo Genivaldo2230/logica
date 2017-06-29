@@ -1,0 +1,82 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function inserirLinha() {
+
+		document.write("<hr>");
+	}
+
+	function exibeTitulo(titulo) {
+
+		document.write("<h1>" + " *** " + titulo + " *** " + "</h1>");
+		inserirLinha();
+		pulaLinha();
+		pulaLinha();
+	}
+
+	function exibeSubTitulo(subTitulo) {
+
+		document.write("<h5>" + " ►►► " + subTitulo + " ◄◄◄  " + "</h5>");
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function calculaImc(altura1, peso1, altura2, peso2) {
+		var imc = peso / (altura * altura);
+		mostra("O IMC calculado é " + Math.round(imc) + ".");
+	}
+
+	function fecharSistema() {
+
+		pulaLinha();
+		document.write("=====>  Cálculo finalizado!...");
+	}
+
+	exibeTitulo("Sistema de cálculo do IMC - Indice de Massa Corporal ");
+	//exibeSubTitulo("Indice de Maça Corporal");
+
+	//var imcFlavio = pesoFlavio / (alturaFlavio * alturaFlavio);
+	exibeSubTitulo("Flávio");
+	var pesoFlavio = 73;
+	var alturaFlavio = 1.71;
+
+	mostra("Peso " + pesoFlavio);
+	mostra("Altura " + alturaFlavio);
+	calculaImc(alturaFlavio, pesoFlavio);
+
+	exibeSubTitulo("Amigo");
+	var pesoAmigo = 68;
+	var alturaAmigo = 1.72;
+
+	mostra("Peso " + pesoAmigo);
+	mostra("Algura " + alturaAmigo);
+	calculaImc(alturaAmigo, pesoAmigo);
+
+	if(imc < 18.5) {
+    	mostra("Seu IMC indica que você está ABAIXO do peso.");
+	}
+
+	/*
+	pode-se realizar oa claculo do IMC também de outra forma
+		//IMC do Flávio
+		calulaImc(73, 1.71); 
+
+		//IMC do amigo
+		calulaImc(68, 1.72)
+
+	*/
+
+	fecharSistema();
+
+</script>

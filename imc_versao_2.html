@@ -1,0 +1,63 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function inserirLinha() {
+
+		document.write("<hr>");
+
+	}
+
+	function exibeTitulo(titulo) {
+
+		document.write("<h1>" + " *** " + titulo + " *** " + "</h1>");
+		inserirLinha();
+		pulaLinha();
+		pulaLinha();
+
+	}
+
+	function exibeSubTitulo(subTitulo) {
+
+		document.write("<h5>" + " ►►► " + subTitulo + " ◄◄◄  " + "</h5>");
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function calculaImc(altura1, peso1, altura2, peso2) {
+		var imc1 = peso1 / (altura1 * altura1);
+		var imc2 = peso2 / (altura2 * altura2);
+		mostra("O IMC calculado é " + Math.round(imc1) + ".");
+		mostra("O IMC calculado é " + Math.round(imc2) + ".");
+		var imcTotal = imc1 + imc2;
+		mostra("A soma dos imc's é " + Math.round(imcTotal) + ".");
+	}
+
+	function fecharSistema() {
+
+		pulaLinha();
+		document.write("=====>  Cálculo finalizado!...");
+	}
+
+	exibeTitulo("Soma dos IMC's ");
+	//exibeSubTitulo("Indice de Maça Corporal");
+
+	//var imcFlavio = pesoFlavio / (alturaFlavio * alturaFlavio);
+
+	calculaImc(1.71, 73, 1.72, 68);
+	
+
+	fecharSistema();
+
+</script>
